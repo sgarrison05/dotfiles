@@ -1,9 +1,9 @@
 
-"                  SHON - Windows 10 PC (WORK) _vimrc config
+                "                  Windows 10 PC (WORK) _vimrc config
 
 "========================= Windows ========================={{{
 
-set nocompatible
+set nocompatible " Disables vi compatibility
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -64,7 +64,7 @@ syntax enable
 set showcmd
 
 " Sets the intial path to my Text Folder
-:cd C:\Users\Shon\ Garrison\Dropbox\Documents(Dbox)\Text_Forms
+:cd C:\Users\
 
 " Set backup folder after folder created
 set backup
