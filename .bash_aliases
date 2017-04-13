@@ -30,10 +30,11 @@ alias l='ls -CF --color=auto'
 #Applications/Scripts
 alias vi='vim'
 alias pygmynote='cd ~/Documents/Notes/pygmynote/;./pygmynote.py;cd'
-alias gcash_bak='~/Documents/Scripts/gnuCash_backup.sh'
-alias gcash_bak_adv='~/Documents/Scripts/gnuCash_backup_adv.sh'
-alias gcash_restore='~/Documents/Scripts/gnuCash_restore.sh'
-alias gcash_bak_fs='~/Documents/Scripts/gnuCash_backup_fserver.sh'
+alias gcash_bak='~/Programming/BASH/gCash/gnuCash_backup.sh'
+alias gcash_bak_adv='~/Programming/BASH/gCash/gnuCash_backup_adv.sh'
+alias gcash_restore='~/Programming/BASH/gCash/gnuCash_restore.sh'
+alias gcash_bak_fs='~/Programming/BASH/gCash/gnuCash_backup_fserver.sh'
+alias menu'~/Programming/BASH/Menu/menu.sh'
 
 #Cleaning Headers
 alias clean='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'
