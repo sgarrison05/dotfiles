@@ -1,8 +1,3 @@
-"              ___________  _________ ___  ____ __ _____________  _____
-"             / __/ ___/ / / <  / / // _ \/ / // //_  __/ __/ _ \/ ___/
-"            _\ \/ (_ / /_/ // /_  _/ // /_  _/ /__/ / _\ \/ ___/ /__  
-"           /___/\___/\____//_/ /_/ \___/ /_//____/_/ /___/_/   \___/  
-"                                                                      
 " .vimrc file settings
 
 
@@ -34,12 +29,12 @@ if has ('gui_running')
 endif
 
 " Sets the intial path of my Text Folder
-:cd ~/Dropbox/Documents(Dbox)/Text_Forms
+:cd ~/Documents
 
 " Sets backup folder 
 set backup
-set backupdir=/home/sgarrison/Documents/VBak
-set directory=/home/sgarrison/Documents/VBak
+set backupdir=~/Documents/VBak
+set directory=~/Documents/VBak
 
 "ups history from default 20
 set history=200
@@ -65,6 +60,7 @@ set autoindent
 
 " set line numbering"
 set nu
+set relativenumber
 
 " sets linebreak
 set linebreak
