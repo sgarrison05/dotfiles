@@ -8,18 +8,21 @@
 
 
 #Upadating
-alias update='sudo apt-get update && sudo apt-get upgrade'
-alias sagu='sudo apt-get update'
+alias update='sudo apt update && sudo apt upgrade'
+alias sagu='sudo apt update'
 
 #Searching Repositories
 alias sas='aptitude search'
 alias sacs='apt-cache search'
 
 #Installing
-alias sagi='sudo apt-get install'
+alias sagi='sudo apt install'
 
 #Configuring
 alias cfg-aliases='cd; vim .bash_aliases'
+alias cfg-vim='cd; vim .vimrc'
+alias cfg-news='cd; vim .newsbeuter/config'
+alias cfg-mutt='cd; vim .mutt/.muttrc'
 
 #Listing
 alias ll='ls -l --color=auto'
@@ -37,7 +40,7 @@ alias gcash_bak_fs='~/Programming/BASH/gCash/gnuCash_backup_fserver.sh'
 alias menu'~/Programming/BASH/Menu/menu.sh'
 
 #Cleaning Headers
-alias clean='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'
+alias clean='sudo apt clean && sudo apt autoclean && sudo apt autoremove'
 
 #Screensaver
 alias lock='xscreensaver-command -l'
