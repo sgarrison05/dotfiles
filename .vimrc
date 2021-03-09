@@ -50,6 +50,7 @@ set wildmode=longest,list
 set wildmenu
 set showmode
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip  "MacOS/Linux
+set path+=**                              " Searches all Subdirectories and Recursively
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
