@@ -85,6 +85,7 @@ set wildmode=list:longest,list:full
 set wildmenu
 set showmode
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+set path+=**                                " Searches all subdirectories and recursively
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
