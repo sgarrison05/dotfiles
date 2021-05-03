@@ -41,6 +41,8 @@ set history=200
 
 "Sets filetypes
 autocmd BufNewFile,BufRead *.md,*.mkd,*.mkdn,*.markdown set filetype=markdown
+abbr _bash #!/bin/bash
+abbr _python #!/usr/bin/python3
 
 " Sets advanced encryption
 set cryptmethod=blowfish
