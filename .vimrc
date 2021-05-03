@@ -117,7 +117,7 @@ let mapleader = ","
 let g:netrw_liststyle=3
 
 " Sets ,v to open tab edit of my .vimrc file
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :vsplit $MYVIMRC<CR>
 
 " If .vimrc is the file open, it automatically writes and sources any
 " changes
