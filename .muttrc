@@ -76,11 +76,8 @@ bind pager gg top
 bind pager G bottom
 
 # Mailboxes to show in the sidebar
-mailboxes =INBOX =Business =Business/DA\ Office =Business/Archives\(B\) 
+mailboxes =INBOX =Business =Business/Archives\(B\) 
 mailboxes =Business/Offense\ Rpts 
-mailboxes =Business/Programs =Business/TJJD =Business/TJJD/Intake 
-mailboxes =Business/TJJD/JCMS =Business/TJJD/JCMS/EDI-Extract 
-mailboxes =Personal =Personal/Amazon =Personal/Apple =Personal/Archives\(P\) 
 mailboxes =Personal/Computer\ Repair
 
 ##COLOR SETTINGS
