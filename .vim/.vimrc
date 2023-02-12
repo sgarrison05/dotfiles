@@ -94,11 +94,21 @@ set hidden
 
 " sets maximum column
 set textwidth=85
-set colorcolumn=80
+"set colorcolumn=80
 
+set showmatch " highlight matching [{()}]
 " Moving up and down as you would expect
 nnoremap <silent> j gj
 nnoremap <silent> k gk
+
+" jk is <Esc>
+inoremap jk <esc>
+
+" The number of lines to keep above and below the cursor
+set scrolloff=1
+set sidescrolloff=5 " The same for columns
+
+
 "}}}
 "========================= Folding ============================{{{
 
