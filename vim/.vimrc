@@ -45,7 +45,7 @@ set history=200
 
 "Sets filetypes
 autocmd BufNewFile,BufRead *.md,*.mkd,*.mkdn,*.markdown set filetype=markdown
-autocmd BufNewFile,BufRead *.txt,*.text set filetype=markdown
+autocmd BufNewFile,BufRead *.txt,*.text set filetype=text
 autocmd BufNewFile,BufRead *.html,*.htm set filetype=html
 
 " Abbreviation shortcuts
