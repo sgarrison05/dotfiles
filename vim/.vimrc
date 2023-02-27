@@ -122,7 +122,7 @@ noremap \\t :below terminal<CR>
 " noremap \\t :botright vertical terminal<CR>
 
 " Easy use of system clipboard
-vmap <Leader>y "+y
+vmap <Leader>y "*y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
 vmap <Leader>p "+p
