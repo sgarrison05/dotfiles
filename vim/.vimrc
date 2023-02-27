@@ -6,6 +6,10 @@
 
 "========================= My Settings ========================={{{
 
+" Set the window's title, reflecting the file currently being edited
+set title
+
+
 set t_Co=256
 
 " Turn on syntax highlighting
@@ -41,11 +45,15 @@ set history=200
 
 "Sets filetypes
 autocmd BufNewFile,BufRead *.md,*.mkd,*.mkdn,*.markdown set filetype=markdown
+autocmd BufNewFile,BufRead *.txt,*.text set filetype=markdown
+autocmd BufNewFile,BufRead *.html,*.htm set filetype=html
+
+" Abbreviation shortcuts
 abbr _bash #!/bin/bash
 abbr _python #!/usr/bin/python3
 
 " Sets advanced encryption
-set cryptmethod=blowfish
+set cryptmethod=blowfish2
 
 " Set Wildmode menu
 set wildmode=longest,list
@@ -77,6 +85,7 @@ set ruler
 " turns off highlight search
 set nohlsearch
 set incsearch "searches as characters are entered
+set smartcase "Automatically switch search to case=sensitive when search query contains an uppercase letter
 
 " Beautify display of hidden characters (tabs and line breaks)
 " (`:set list!` to toggle)
@@ -108,6 +117,15 @@ inoremap jk <esc>
 set scrolloff=1
 set sidescrolloff=5 " The same for columns
 
+" Sets location of internal terminal
+noremap \\t :below terminal<CR>
+" noremap \\t :botright vertical terminal<CR>
+
+" Easy use of system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+vmap <Leader>p "+p
 
 "}}}
 "========================= Folding ============================{{{
@@ -119,6 +137,7 @@ set foldlevel=0
 " Space to toggle folds.
 nnoremap <Space> za
 vnoremap <Space> za
+
 "}}}
 "========================= Mappings ============================{{{
 
@@ -191,6 +210,9 @@ vnoremap <leader>w <ESC>:w<cr>
 
 " sets Ctrl-t for new tab
 nnoremap <C-t> :tabnew<cr>
+
+" Make splits where you want
+set splitbelow splitright
 
 " easier moving between windows
 nnoremap <C-j> <C-w>j
