@@ -1,20 +1,14 @@
 " .vimrc file settings
 
-
-
-
-
 "========================= My Settings ========================={{{
 
 " Set the window's title, reflecting the file currently being edited
 set title
-
-
 set t_Co=256
 
 " Turn on syntax highlighting
-syntax on
 syntax enable
+set omnifunc=syntaxcomplete#Complete  " Omni completion
 
 " colorscheme
 colorscheme colorful256
@@ -51,6 +45,7 @@ autocmd BufNewFile,BufRead *.html,*.htm set filetype=html
 " Abbreviation shortcuts
 abbr _bash #!/bin/bash
 abbr _python #!/usr/bin/python3
+abbr _awk #!/usr/bin/awk
 
 " Sets advanced encryption
 set cryptmethod=blowfish2
@@ -66,20 +61,11 @@ set path+=**                              " Searches all Subdirectories and Recu
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" sets autoindent feature
 set autoindent
-
-" set line numbering"
 set nu
 set relativenumber
-
-" sets linebreak
 set linebreak
-
-" wraps text
 set wrap
-
-" set ruler
 set ruler
 
 " turns off highlight search
@@ -102,7 +88,7 @@ set spelllang=en_us
 set hidden
 
 " sets maximum column
-set textwidth=85
+set textwidth=87
 "set colorcolumn=80
 
 set showmatch " highlight matching [{()}]
@@ -242,7 +228,7 @@ set popt=header:0
 "========================= Plugins ============================{{{
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline 
+" Airline/Powerline 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -252,6 +238,15 @@ let g:airline_powerline_fonts=1
 let g:Powerline_symbols = 'fancy'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+execute pathogen#infect()
+call pathogen#helptags()
+syntax on
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>n :NERDTree<cr>
@@ -259,9 +254,43 @@ map <leader>n :NERDTree<cr>
 let g:NERDTreeQuitOnOpen=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP (Fuzzy File Finder) 
+" CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UltiSnips
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ 
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+ 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" let g:UltiSnipsSnippetDirectories=[]
+ 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FZF
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Add to the runtimepath for fzf
+set rtp+=~/.fzf
+set path+=**                      " Search all sudirectories and recursively
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vimwiki
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:vimwiki_list = [{'path': '~/Documents/Notes/Wiki_Notes/',
+                      \ 'syntax': 'markdown', 'ext': '.wiki'}]
+
+" Overides default behavior to see all .md files as a wiki
+let g:vimwiki_ext2syntax = {'.wiki': 'markdown'}
+
+"let g:vimwiki_global_ext = 0
 
 "}}}
