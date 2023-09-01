@@ -12,11 +12,13 @@ alias sacs='apt-cache search'
 #Installing
 alias sagi='sudo apt install'
 
+#Cleaning Headers
+alias clean='sudo apt clean && sudo apt autoclean && sudo apt autoremove'
+
 #Configuring
 alias cfg-aliases='cd; vim .bash_aliases'
 alias cfg-vim='cd; vim .vimrc'
-alias cfg-news='cd; vim .newsbeuter/config'
-alias cfg-mutt='cd; vim .mutt/.muttrc'
+#alias cfg-news='cd; vim .newsbeuter/config'
 
 #Listing
 alias ll='ls -l --color=auto'
@@ -33,16 +35,13 @@ alias gcash_restore='gnuCash_restore.sh'
 alias gcash_bak_fs='gnuCash_backup_fserver.sh'
 alias menu'menu.sh'
 
-#Cleaning Headers
-alias clean='sudo apt clean && sudo apt autoclean && sudo apt autoremove'
-
 # Common Misspellings
 alias clera='clear'
 alias clara='clear'
 alias clar='clear'
+alias cls='clear'
 alias cd..='cd ..'
 
 #Shortcuts to Directories
 alias documents='cd /home/sgarrison/Documents/ && ls -l'
 alias pics='cd /home/sgarrison/Pictures/ && ls -l'
-alias videos='cd /home/sgarrison/Videos/ && ls -l'
