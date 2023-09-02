@@ -18,13 +18,13 @@ alias clean='sudo apt clean && sudo apt autoclean && sudo apt autoremove'
 #Configuring
 alias cfg-aliases='cd; vim .bash_aliases'
 alias cfg-vim='cd; vim .vimrc'
-#alias cfg-news='cd; vim .newsbeuter/config'
+alias cfg-news='cd; vim .newsboat/config'
 
 #Listing
-alias ll='ls -l --color=auto'
-alias lla='ls -alF --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
+alias ll='ls -l --color=auto --group-directories-first'
+alias lla='ls -alF --color=auto --group-directories-first'
+alias la='ls -A --color=auto --group-directories-first'
+alias l='ls -CF --color=auto --group-directories-first'
 
 #Applications/Scripts most scripts added to directory in $PATH
 alias vi='vim'
@@ -43,5 +43,5 @@ alias cls='clear'
 alias cd..='cd ..'
 
 #Shortcuts to Directories
-alias documents='cd /home/sgarrison/Documents/ && ls -l'
-alias pics='cd /home/sgarrison/Pictures/ && ls -l'
+alias documents='cd $HOME/Documents/ && ls -l'
+alias pics='cd $HOME/Pictures/ && ls -l'
