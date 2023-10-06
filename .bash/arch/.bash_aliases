@@ -11,8 +11,8 @@ alias pinstall='sudo pacman -S'
 alias premove='sudo pacman -Rns'
 
 # Searching
-alias prsearch='sudo pacman -Si'
-alias psearch='sudo pacman -Ss'
+alias prsearch='sudo pacman -Ss'
+alias psearch='sudo pacman -Q'
 alias pisearch='sudo pacman -Qe'
 alias pacid='sudo pacman -Qi'
 
@@ -32,9 +32,12 @@ alias ls='ls -h --color=auto --group-directories-first'
 
 # Applications
 alias vi='vim'
+alias wget="wget -c"
+alias free="free -mt"
 
 # Cleaning
 alias pclean='sudo pacman -Sc'
+alias premove='sudo pacman -Rnsu'
 
 # Common Misspellings
 alias clera='clear'
@@ -52,6 +55,5 @@ alias notes='cd $HOME/Notes/ && ls -l'
 alias wtr='curl wttr.in' # local weather in cli
 alias st='curl -s https://raw.githubusertontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
 alias cheatdb='echo curl https://cheat.sh/'
-
 alias pwrd='poweroff'
 
