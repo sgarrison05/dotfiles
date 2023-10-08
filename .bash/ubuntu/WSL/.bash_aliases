@@ -18,7 +18,7 @@ alias sagi='sudo nala install'
 #Configuring
 alias cfg-aliases='cd; vim .bash_aliases'
 alias cfg-vim='cd; vim .vimrc'
-alias cfg-news='cd; vim .newsbeuter/config'
+alias cfg-news='cd; vim .newsboat/config'
 alias cfg-mutt='cd; vim .mutt/.muttrc'
 
 #Listing
