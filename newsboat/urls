@@ -1,6 +1,4 @@
-----------------------------------
-------------Newsfeeds-------------
-----------------------------------
+----------IT Newsfeeds-----------
 http://feeds.podtrac.com/qjDxovCnSaSq "~Kim Komando Today"
 http://xmodulo.com/feed Linux "~Xmodulo"
 http://www.omgubuntu.co.uk/feed Linux "~OMG Ubuntu!"
@@ -10,29 +8,25 @@ http://www.linux-magazine.com/rss/feed/lmi_news Linux "~Linux Magazine Full Feed
 http://www.linuxinsider.com/perl/syndication/rssfull.pl Linux "~LinuxInsider"
 http://opensource.com/feed Linux "~Opensource.com"
 http://www.pcworld.com/index.rss Technology "~PC World: Main"
-http://www.pcworld.com/howto/index.rss Technology "~PC World: How-Tos"
 http://www.tuxmachines.org/node/feed Linux "~Tuxmachines.org"
-http://feeds.feedburner.com/linuxinternetworks?format=xml Linux "~Linux Internetworks"
-http://feeds.gawker.com/lifehacker/full Misc "~Lifehacker"
 http://feeds.feedburner.com/ItsFoss "~It's Foss"
 http://www.wonderhowto.com/rss.xml "~WonderHowTo"
-http://feeds.howtogeek.com/howtogeek Technology "~How-To Geek"
+https://www.howtogeek.com/feed/ Technology "~How-To Geek"
 https://www.makeuseof.com/feed "~MakeUseOf"
-http://www.itworld.com/news/index.rss Technology "~IT World"
 http://news.softpedia.com/newsRSS/Global-0.xml Technology "~Softpedia News - Global"
 http://vimcasts.org/feeds/ogg.rss Vim "~Vimcasts.org"
 http://feeds.feedburner.com/noobslab Linux "~Noobslab.com"
 http://feeds.feedburner.com/SimplyJun Linux "~Techsource"
 http://feeds.feedburner.com/TheGeekStuff?format=xml Linux "~The Geek Stuff"
 http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks "~nixCraft"
-----------------------------------
+------------Newsfeeds-------------
+https://www.newsmax.com/rss/Newsfront/16/ "~Newsmax"
+https://www.12newsnow.com/feeds/syndication/rss/news/local "~12News Now"
 ------------reddit----------------
-----------------------------------
 http://www.reddit.com/r/nosleep/.rss "~NoSleep-Subreddit"
 http://www.reddit.com/r/vim/.rss "~Vim-Subreddit"
-----------------------------------
 ------------YouTube---------------
-----------------------------------
 https://www.learnlinux.tv/feed "~Learn Linux TV"
+https://lukesmith.xyz/rss.xml "~Luke Smith"
 https://christitus.com/categories/linux/index.xml "~Chris Titus - Linux"
 https://christitus.com/categories/windows/index.xml "~Chris Titus - Windows"
