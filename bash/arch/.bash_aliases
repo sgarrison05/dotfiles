@@ -37,7 +37,6 @@ alias free="free -mt"
 
 # Cleaning
 alias pclean='sudo pacman -Sc'
-alias premove='sudo pacman -Rnsu'
 
 # Common Misspellings
 alias clera='clear'
