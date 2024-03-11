@@ -1,38 +1,47 @@
-" .vimrc file settings
+"     _             ____            _     _    __        ______  _     
+"    | |_   ___   _|  _ \ _ __ ___ | |__ / |   \ \      / / ___|| |    
+" _  | | | | \ \ / / |_) | '__/ _ \| '_ \| |____\ \ /\ / /\___ \| |    
+"| |_| | |_| |\ V /|  __/| | | (_) | |_) | |_____\ V  V /  ___) | |___ 
+" \___/ \__,_| \_/ |_|   |_|  \___/|_.__/|_|      \_/\_/  |____/|_____|
+                                                                      
+" .vimrc file
 
 "========================= My Settings ========================={{{
 
-" Set the window's title, reflecting the file currently being edited
+" Set the window’s title, reflecting the file currently being edited
 set title
 set t_Co=256
 
-" Turn on syntax highlighting
+" Turn on Syntax highlighting
 syntax enable
 set omnifunc=syntaxcomplete#Complete  " Omni completion
-
-" colorscheme
-colorscheme colorful256
 
 " Show incomplete commands at the bottom
 set showcmd
 
-" set font for cmd line
+" colorscheme
+colorscheme colorful256 
+
+" Set font for cmd line
 set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline
 
 " Sets parameters for gvim
 if has ('gui_running')
   "set guifont=Monospace\ 12 
   set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 14
-  set guioptions-=T " removes gui toolbar
+  set guioptions-=T "removes toolbar  
 endif
 
 " Sets the intial path of my Text Folder
-:cd ~/Documents
+:cd ~/Documents/Text_Files
 
-" Sets backup folder 
+" Save a file as root (,W)
+noremap <leader>:W !sudo tee % > ?dev?null<CR>
+
+" Sets backup folder
 set backup
-set backupdir=~/Documents/VBak
-set directory=~/Documents/VBak
+set backupdir=/home/$USER/Documents/VBak
+set directory=/home/$USER/Documents/VBak
 
 "ups history from default 20
 set history=200
@@ -42,10 +51,10 @@ autocmd BufNewFile,BufRead *.md,*.mkd,*.mkdn,*.markdown set filetype=markdown
 autocmd BufNewFile,BufRead *.txt,*.text set filetype=text
 autocmd BufNewFile,BufRead *.html,*.htm set filetype=html
 
-" Abbreviation shortcuts
+" Abbreviations
 abbr _bash #!/bin/bash
 abbr _python #!/usr/bin/python3
-abbr _awk #!/usr/bin/awk
+abbr _awk #!/usr/bin/awk -f
 
 " Sets advanced encryption
 set cryptmethod=blowfish2
@@ -54,8 +63,7 @@ set cryptmethod=blowfish2
 set wildmode=longest,list
 set wildmenu
 set showmode
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  "MacOS/Linux
-set path+=**                              " Searches all Subdirectories and Recursively
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
@@ -70,8 +78,8 @@ set ruler
 
 " turns off highlight search
 set nohlsearch
-set incsearch "searches as characters are entered
-set smartcase "Automatically switch search to case=sensitive when search query contains an uppercase letter
+set incsearch " searches characters as they are entered
+set smartcase "Automatically switch search to case-sensitive when search query contains an uppercase letter
 
 " Beautify display of hidden characters (tabs and line breaks)
 " (`:set list!` to toggle)
@@ -87,28 +95,27 @@ set spelllang=en_us
 " Allows you to change buffer w/o saving
 set hidden
 
-" sets maximum column
-set textwidth=87
+" Sets maximum textwidth
 "set colorcolumn=80
+set textwidth=87
 
-set showmatch " highlight matching [{()}]
 " Moving up and down as you would expect
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
-" jk is <Esc>
+" jk is escape
 inoremap jk <esc>
 
-" The number of lines to keep above and below the cursor
+" The number of screen lines/columns to keep beside/above/below the cursor
 set scrolloff=1
-set sidescrolloff=5 " The same for columns
+set sidescrolloff=5
 
 " Sets location of internal terminal
 noremap \\t :below terminal<CR>
 " noremap \\t :botright vertical terminal<CR>
 
 " Easy use of system clipboard
-vmap <Leader>y "*y
+vmap <Leader>y "+y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
 vmap <Leader>p "+p
@@ -134,19 +141,20 @@ let mapleader = ","
 let g:netrw_liststyle=3
 
 " Sets ,v to open tab edit of my .vimrc file
-nmap <leader>v :vsplit $MYVIMRC<CR>
-
+nmap <leader>v :vsplit $MYVIMRC<CR> 
 " If .vimrc is the file open, it automatically writes and sources any
 " changes
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+" Re-index ctags
+:autocmd BufWritePost * call system("ctags -R")
+
 " Bubbling Single Lines of Text with arrow keys only{{{2
 " no <down> ddp
 " no <up> ddkP
 "}}}2
-
 " Disabling arrow keys except for bubbling text above{{{2
 no <left> <Nop>
 no <right> <Nop>
@@ -163,7 +171,6 @@ vno <right> <Nop>
 vno <up> <Nop>
 vno <down> <Nop>
 "}}}2
-
 " Remapps Autocomplete Word
 :imap <F5> <C-X><C-P> 
 
@@ -227,52 +234,54 @@ set popt=header:0
 "}}}
 "========================= Plugins ============================{{{
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Airline/Powerline 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline/Powerline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set encoding=utf-8 " Necessary to show Unicode glyphs
-set nocompatible   " Disable vi-compatibility
+set nocompatible " Disables vi-compatibility
 set laststatus=2   " Always show the statusline
 let g:airline_powerline_fonts=1
 let g:Powerline_symbols = 'fancy'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <leader>n :NERDTree<cr>
+" Close NERDTree after file is open
+let g:NERDTreeQuitOnOpen=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 execute pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>n :NERDTree<cr>
-" Close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UltiSnips
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
-" Trigger configuration.
+
+" Trigger configuration. 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
- 
+
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 " let g:UltiSnipsSnippetDirectories=[]
- 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
