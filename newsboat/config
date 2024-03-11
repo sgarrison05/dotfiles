@@ -6,7 +6,7 @@ bind-key l open
 bind-key m toggle-show-read-feeds
 
 # sets the default browswer
-#browser /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+# browser "/usr/bin/brave"
 browser "/usr/bin/elinks"
 
 #show-read-feeds no
