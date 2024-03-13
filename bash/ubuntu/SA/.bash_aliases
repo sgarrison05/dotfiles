@@ -22,20 +22,13 @@ alias clean='sudo apt clean && sudo apt autoclean && sudo apt autoremove'
 alias cfg-aliases='cd; vim .bash_aliases'
 alias cfg-vim='cd; vim .vimrc'
 alias cfg-news='cd; vim .newsboat/config'
-<<<<<<<< HEAD:.bash/ubuntu/SA/.bash_aliases
 alias cfg-mutt='cd; vim .mutt/.muttrc'
-========
->>>>>>>> 0e5d3fa7c78be14bf3eba91429abcbbb8f57d9f2:.bash/ubuntu/.bash_aliases
 
 #Listing
 alias ll='ls -l --color=auto --group-directories-first'
 alias lla='ls -alF --color=auto --group-directories-first'
 alias la='ls -A --color=auto --group-directories-first'
 alias l='ls -CF --color=auto --group-directories-first'
-<<<<<<<< HEAD:.bash/ubuntu/SA/.bash_aliases
-
-========
->>>>>>>> 0e5d3fa7c78be14bf3eba91429abcbbb8f57d9f2:.bash/ubuntu/.bash_aliases
 
 #Applications/Scripts most scripts added to directory in $PATH
 alias vi='vim'
