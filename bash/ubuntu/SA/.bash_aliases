@@ -36,7 +36,7 @@ alias gcash_bak='gnuCash_backup.sh'
 alias gcash_bak_adv='gnuCash_backup_adv.sh'
 alias gcash_restore='gnuCash_restore.sh'
 alias gcash_bak_fs='gnuCash_backup_fserver.sh'
-alias menu'menu.sh'
+alias menu='menu.sh'
 alias lg='lazygit'
 alias wtr='curl wttr.in'
 alias st='curl -s

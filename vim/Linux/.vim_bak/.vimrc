@@ -1,9 +1,4 @@
-"     _             ____            _     _    __        ______  _     
-"    | |_   ___   _|  _ \ _ __ ___ | |__ / |   \ \      / / ___|| |    
-" _  | | | | \ \ / / |_) | '__/ _ \| '_ \| |____\ \ /\ / /\___ \| |    
-"| |_| | |_| |\ V /|  __/| | | (_) | |_) | |_____\ V  V /  ___) | |___ 
-" \___/ \__,_| \_/ |_|   |_|  \___/|_.__/|_|      \_/\_/  |____/|_____|
-                                                                      
+" Generic .vimrc file for any computer                                                                     
 " .vimrc file
 
 "========================= My Settings ========================={{{
@@ -117,8 +112,13 @@ noremap \\t :below terminal<CR>
 " Easy use of system clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
+nmap <Leader>y "+yy
 nmap <Leader>p "+p
 vmap <Leader>p "+p
+
+" Open netrw/fzf/search
+nmap <Leader>x :Explore<CR>
+nmap <Leader>f :Files<CR>
 
 "}}}
 "========================= Folding ============================{{{
