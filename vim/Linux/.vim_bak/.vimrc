@@ -237,6 +237,10 @@ nmap <Leader>bd :bd<CR>
 " shows all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+" file operations
+nmap <C-s> :w<CR>
+nmap <C-q> :q<CR>
+
 "}}}
 "========================= Printing ==========================={{{
 
