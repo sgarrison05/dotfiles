@@ -76,9 +76,16 @@ set history=200
 
 "Sets filetypes
 autocmd BufNewFile,BufRead *.md,*.mkd,*.mkdn,*.markdown set filetype=markdown
+autocmd BufNewFile,BufRead *.txt,*.text set filetype=text
+autocmd BufNewFile,BufRead *.html,*.htm set filetype=html
+
+" Abbreviations
+abbr _bash #!/bin/bash
+abbr _python #!/usr/bin/python3
+abbr _awk #!/usr/bin/awk -f
 
 " Sets advanced encryption
-set cryptmethod=blowfish
+set cryptmethod=blowfish2
 
 " Set Wildmode menu
 set wildmode=list:longest,list:full
@@ -95,17 +102,12 @@ highlight SpecialKey guifg=#4a4a59
 "========================= Options ========================={{{2
 
 set autoindent " sets autoindent feature
-
 set number " set line numbering"
-
+set relativenumber 
 set linebreak " sets linebreak
-
 set wrap " wraps text
-
 set ruler " set ruler
- 
 set autoread "automatically reads when a file has been changed outside vim
-
 
 "}}}2
 " turns off highlight search
@@ -128,12 +130,34 @@ set spelllang=en_us
 set hidden
 
 " Sets max column
-set textwidth=85
-set colorcolumn=80
+" set textwidth=85
+" set colorcolumn=80
 
 " moving up and down as you would expect
 nnoremap <silent> j gj
 nnoremap <silent> k gk
+
+" jk is escape
+inoremap jk <esc>
+
+" The number of screen lines/columns to keep beside/above/below the cursor
+set scrolloff=1
+set sidescrolloff=5
+
+" Sets location of internal terminal
+noremap \\t :below terminal<CR>
+" noremap \\t :botright vertical terminal<CR>
+
+" Easy use of system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>y "+yy
+nmap <Leader>p "+p
+vmap <Leader>p "+p
+
+" Open netrw/fzf/search
+nmap <Leader>x :Explore<CR>
+nmap <Leader>f :Files<CR>
 
 "}}}
 "========================= Folding =============================={{{
@@ -219,8 +243,23 @@ inoremap <leader>w <ESC>:w<cr>
 nnoremap <leader>w <ESC>:w<cr>
 vnoremap <leader>w <ESC>:w<cr>
 
+" Easier Moving page at a time
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
 " sets Ctrl-t for new tab
 nnoremap <C-t> :tabnew<cr>
+
+" Make splits where you want
+set splitbelow splitright
+
+" Make adjusting split sizes a bit more friendly
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
 
 " easier moving between windows
 nnoremap <C-j> <C-w>j
@@ -236,6 +275,23 @@ nnoremap c<C-h> :lefta vsp new<cr>
 
 " Ordered list incrementing with ,<enter>
 inoremap <leader><cr> <esc>Yp<C-a>elC
+
+" Buffers
+" new empty buffer
+nmap <Leader>t :enew<CR>
+" moves to the next buffer
+nmap <Leader>l :bnext<CR>
+" moves to the previous buffer
+nmap <Leader>h :bprevious<CR>
+" closes the current buffer moves to the previous one
+nmap <Leader>bd :bd<CR>
+" shows all open buffers and their status
+nmap <leader>bl :ls<CR>
+
+" file operations
+nmap <C-s> :w<CR>
+nmap <C-q> :q<CR>
+
 "}}}
 "========================= Printing ============================={{{
 
@@ -257,6 +313,7 @@ let g:airline_powerline_fonts = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 map <leader>n :NERDTree<cr>
 
 " Close NERDTree after a file is opened
@@ -265,8 +322,8 @@ let g:NERDTreeQuitOnOpen=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimwiki 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin on
 
+filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP     

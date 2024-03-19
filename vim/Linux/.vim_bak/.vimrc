@@ -201,6 +201,12 @@ inoremap <leader>w <ESC>:w<cr>
 nnoremap <leader>w <ESC>:w<cr>
 vnoremap <leader>w <ESC>:w<cr>
 
+" Easier Moving page at a time
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
 " sets Ctrl-t for new tab
 nnoremap <C-t> :tabnew<cr>
 
@@ -224,6 +230,9 @@ nnoremap c<C-j> :bel sp new<cr>
 nnoremap c<C-k> :abo sp new<cr>
 nnoremap c<C-l> :rightb vsp new<cr>
 nnoremap c<C-h> :lefta vsp new<cr>
+
+" Ordered list incrementing with ,<enter>
+inoremap <leader><cr> <esc>Yp<C-a>elC
 
 " Buffers
 " new empty buffer
