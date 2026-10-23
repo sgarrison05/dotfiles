@@ -55,26 +55,33 @@ abbr _awk #!/usr/bin/awk -f
 set cryptmethod=blowfish2
 
 " Set Wildmode menu
-set wildmode=longest,list
+set wildmode=list:longest,list:full
 set wildmenu
 set showmode
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set path+=**
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+"========================= Options ========================={{{2
+
 set autoindent
-set nu
+set number
 set relativenumber
 set linebreak
 set wrap
 set ruler
+set autoread " automatically reads when file has been changed ouside vim
+
+"}}}2
 
 " turns off highlight search
 set nohlsearch
 set incsearch " searches characters as they are entered
 set smartcase "Automatically switch search to case-sensitive when search query contains an uppercase letter
+set ignorecase " case insensitive searching
 
 " Beautify display of hidden characters (tabs and line breaks)
 " (`:set list!` to toggle)
@@ -141,7 +148,8 @@ let mapleader = ","
 let g:netrw_liststyle=3
 
 " Sets ,v to open tab edit of my .vimrc file
-nmap <leader>v :vsplit $MYVIMRC<CR> 
+nmap <leader>v :vsplit $MYVIMRC<CR>
+
 " If .vimrc is the file open, it automatically writes and sources any
 " changes
 if has("autocmd")
@@ -154,7 +162,9 @@ endif
 " Bubbling Single Lines of Text with arrow keys only{{{2
 " no <down> ddp
 " no <up> ddkP
+
 "}}}2
+
 " Disabling arrow keys except for bubbling text above{{{2
 no <left> <Nop>
 no <right> <Nop>
@@ -170,7 +180,9 @@ vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
 vno <down> <Nop>
+
 "}}}2
+
 " Remapps Autocomplete Word
 :imap <F5> <C-X><C-P> 
 
